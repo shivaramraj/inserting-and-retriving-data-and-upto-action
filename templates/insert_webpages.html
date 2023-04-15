@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wepage</title>
+    <style>
+        body{
+            background-color: aqua;
+        }
+        h1{
+            color: green;
+        }
+
+    </style>
+</head>
+<body>
+    <center>
+        <form action="" method="POST">
+            {% csrf_token %}
+            <label for="topic">Topic_name</label>
+            <select name="topic" id="topic"><br><br>
+                {% for x in topics %}
+                <option value="{{x}}">{{x.topic_name}}</option>
+                {% endfor %}
+            </select><br><br>
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name"><br><br>
+            <label for="url">URL</label>
+            <input type="url" name="url" id="url"><br><br>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email"><br><br>
+            <input type="submit" value="insert data into webpages">
+
+        </form>
+    </center>
+        <!-- {% csrf_token %}
+        <div id="registform">
+
+            <div class="formgroup">
+                <input type="text" name="" id="">
+
+            </div>
+        </div> -->
+    </form></center>
+</body>
+</html>
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>css.reg form</title>
+    <link rel="stylesheet" href="reg form.css">
+    <style>
+        body
+{
+    background-image: url(../source/reg\ form.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+#regform
+{
+    background: linear-gradient( rgb(232, 182, 124), rgba(225, 141, 44, 0.881));
+    padding: 40px 2px;
+    margin: 180px auto;
+    text-align: center;
+    width: 400px;
+    border: none;
+    font-size: large;
+}
+.formgroup
+{
+    padding: 5px;
+}
+.formgroup input[type='text']
+.formgroup input[type='email']
+.formgroup input[type='password']
+{
+    outline: none;
+    border: none;
+    margin-bottom: 2px;
+    background-color: transparent;
+    color: aliceblue;
+
+}
+::placeholder
+{
+    color: rgb(188, 188, 132);
+    border-bottom: 5px solid rgb(117, 132, 130);
+}
+select
+{
+    width: 169px;
+    outline: none;
+    border: none;
+    margin-bottom: 2px;
+    background-color: transparent;
+    color: white;
+    border-bottom: 1px solid white;
+}
+textarea
+{
+    width: 167px;
+    color: rgb(86, 143, 138);
+    outline: none;
+    border: none;
+    margin-bottom: 2px;
+    background-color: transparent;
+    border-bottom: 1px solid white;
+}
+.formgroup input[type='submit']
+{
+    color:rgb(193, 35, 214) ;
+}
+input
+{
+    outline: none;
+    border: none;
+    margin-bottom: 2px;
+    background-color: transparent;
+    border-bottom: 3px solid white;
+    width: 168px;
+}
+::placeholder
+{
+    color: white;
+}
+    </style>
+</head>
+<body>
+<div id="regform" >
+    <div class="formgroup" >
+        <input type=" text" placeholder="Enter user name">                
+    </div>
+    <div class="formgroup" >
+        <input type="Mail" placeholder="Email">
+    </div>
+    <div class="formgroup" >
+        <input type="password" placeholder="Enter the password">
+    </div>
+    <div class="formgroup">
+        <input type="password" placeholder="conform password">
+    </div>
+    <div class="formgroup">
+        <select>
+            <option>select designation</option>
+            <option>Team lead</option>
+            <option>Team senior</option>
+            <option>sr.s/w eng</option>
+        </select>
+    </div>
+    <div class="formgroup">
+        <textarea placeholder="enter discription" ></textarea>
+    </div>
+    <div class="formgroup">
+        <button>submit</button>
+    </div>
+</div>
+</body>
+</html> -->

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Access</title>
+</head>
+<body>
+    <center>
+        <h1>insert data into accesss</h1>
+        <form action="" method="POST">
+            {% csrf_token %}
+            <label for="Aname">Name</label>
+            <select name="Aname" id="Aname">
+                {% for x in webpages %}
+                <option value="{{x}}">{{x.name}}</option>
+                {% endfor %}
+            </select><br>
+            <label for="Aauther">Aauther</label>
+            <input type="text" name="Aauther" id="Aauther"><br><br>
+            <label for="Adate">Date</label>
+            <input type="text" name="Adate" id="Adate"><br><br>
+            <input type="submit" value="insertdata into access">      
+        </form>
+    </center>
+    
+</body>
+</html>
